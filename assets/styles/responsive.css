@@ -1,0 +1,107 @@
+
+
+@media (max-width: 768px) {
+
+	.login-box {
+        width: 100%;
+    }
+
+    .item-home {
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    .item-cursos {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    .items li:before {
+        margin-right: 10px;
+    }
+
+    .items li {
+        margin-right: 0px;
+        line-height: 23px;
+        padding: 10px 0;
+        border-bottom: dashed 1px #DDD;
+    }
+
+    .items li small {
+        margin-left: 20px;
+        display: block;
+    }
+
+    .pop-box {
+        top: 100px;
+        left: 5%;
+        width: 90%;
+    }
+
+    .pop-container {
+        padding: 40px 20px;
+    }
+
+    .form-border {
+        padding: 10px 15px;
+        margin: 20px 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .row-form {
+        margin-top: 0px;
+    }
+
+    .row-strong {
+        padding: 5px 0 5px;
+        margin: 20px 15px 0px;
+        border-bottom: solid 1px #CCC;
+    }
+
+    .lbl {
+        margin-top: 20px;
+    }
+
+    .pagos-list {
+        margin-top: 30px;
+    }
+
+    .pagos-item {
+        padding: 15px 0 10px;
+        line-height: 25px;
+        border-top: solid 1px #CCC;
+    }
+
+    #select-config {
+        border-radius: 0 !important;
+        background: #F4F4F4;
+        color: #777;
+        border: solid 1px #DDD;
+    }
+
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    
+    
+    
+}
+
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    
+    
+}
+
+
+
+@media (min-width: 1200px) {
+    
+    
+    
+}

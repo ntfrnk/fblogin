@@ -1,0 +1,197 @@
+
+.hide {
+	display: none;
+}
+
+
+/* Buttons ***********************************************/
+
+.btn-primary {
+	background: var(--primary) !important;
+	border-color: var(--primary) !important;
+}
+
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary:focus {
+	background: var(--primary-on) !important;
+	border-color: var(--primary-on) !important;
+}
+
+.btn-secondary {
+	background: var(--secondary) !important;
+	border-color: var(--secondary) !important;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active,
+.btn-secondary:focus {
+	background: var(--secondary-on) !important;
+	border-color: var(--secondary-on) !important;
+}
+
+.btn-success {
+	background: var(--success) !important;
+	border-color: var(--success) !important;
+}
+
+.btn-success:hover,
+.btn-success:active,
+.btn-success:focus {
+	background: var(--success-on) !important;
+	border-color: var(--success-on) !important;
+}
+
+.btn-info {
+	background: var(--info) !important;
+	border-color: var(--info) !important;
+}
+
+.btn-info:hover,
+.btn-info:active,
+.btn-info:focus {
+	background: var(--info-on) !important;
+	border-color: var(--info-on) !important;
+}
+
+.btn-warning {
+	background: var(--warning) !important;
+	border-color: var(--warning) !important;
+}
+
+.btn-warning:hover,
+.btn-warning:active,
+.btn-warning:focus {
+	background: var(--warning-on) !important;
+	border-color: var(--warning-on) !important;
+}
+
+.btn-danger {
+	background: var(--danger) !important;
+	border-color: var(--danger) !important;
+}
+
+.btn-danger:hover,
+.btn-danger:active,
+.btn-danger:focus {
+	background: var(--danger-on) !important;
+	border-color: var(--danger-on) !important;
+}
+
+
+/* Buttons Outline ***************************************/
+
+.btn-outline-primary {
+	color: var(--primary) !important;
+	border-color: var(--primary) !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active,
+.btn-outline-primary:focus {
+	color: var(--colorBlanco) !important;
+	background: var(--primary) !important;
+	border-color: var(--primary) !important;
+}
+
+.btn-outline-secondary {
+	color: var(--secondary) !important;
+	border-color: var(--secondary) !important;
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:active,
+.btn-outline-secondary:focus {
+	color: var(--colorBlanco) !important;
+	background: var(--secondary) !important;
+	border-color: var(--secondary) !important;
+}
+
+.btn-outline-success {
+	color: var(--success) !important;
+	border-color: var(--success) !important;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:active,
+.btn-outline-success:focus {
+	color: var(--colorBlanco) !important;
+	background: var(--success) !important;
+	border-color: var(--success) !important;
+}
+
+.btn-outline-info {
+	color: var(--info) !important;
+	border-color: var(--info) !important;
+}
+
+.btn-outline-info:hover,
+.btn-outline-info:active,
+.btn-outline-info:focus {
+	color: var(--colorBlanco) !important;
+	background: var(--info) !important;
+	border-color: var(--info) !important;
+}
+
+.btn-outline-warning {
+	color: var(--warning) !important;
+	border-color: var(--warning) !important;
+}
+
+.btn-outline-warning:hover,
+.btn-outline-warning:active,
+.btn-outline-warning:focus {
+	color: var(--colorBlanco) !important;
+	background: var(--warning) !important;
+	border-color: var(--warning) !important;
+}
+
+.btn-outline-danger {
+	color: var(--danger) !important;
+	border-color: var(--danger) !important;
+}
+
+.btn-outline-danger:hover,
+.btn-outline-danger:active,
+.btn-outline-danger:focus {
+	color: var(--colorBlanco) !important;
+	background: var(--danger) !important;
+	border-color: var(--danger) !important;
+}
+
+
+/* Buttons Link ******************************************/
+
+.btn-link {
+	color: var(--primary);
+}
+
+.btn-link:hover {
+	color: var(--primary-on);
+}
+
+
+
+.texto a:link,
+.texto a:visited,
+a.link:link,
+a.link:visited {
+	color: var(--primary);
+}
+.texto a:hover,
+.texto a:active,
+a.link:hover,
+a.link:active {
+	color: var(--primary-on);
+}
+
+
+
+.table td,
+.table th {
+	vertical-align: middle;
+}
+
+.page-link {
+	padding: 10px 20px !important;
+}

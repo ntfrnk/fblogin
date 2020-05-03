@@ -1,0 +1,118 @@
+:root {
+	/* Colores generales */
+	--colorPrincipal: #16262E;
+	--colorSecundario: #E4572E;
+	--colorSecundario-on: #BB4826;
+	--colorBlanco: #FFF;
+	--colorTexto: #555;
+	--colorTitulo: #333;
+	--blancoTransparente: rgba(255,255,255,0.95);
+	--colorGrisClaro: #999;
+
+	/* Bootstrap */
+	--primary: #337FA9;
+	--primary-on: #005F93;
+	--secondary: #506880;
+	--secondary-on: #244260;
+	--success: #528D46;
+	--success-on: #277018;
+	--info: #33B8ED;
+	--info-on: #00A6E8;
+	--warning: #CDA133;
+	--warning-on: #C18A00;
+	--danger: #AD3333;
+	--danger-on: #990000;
+}
+
+
+body {
+	font-family: Muli;
+	padding-top: 70px;
+}
+
+h1, h2, h3, h4 {
+	font-family: Fjalla One;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: var(--colorPrincipal);
+	height: 70px;
+	z-index: 2;
+}
+
+.logo img {
+	height: 40px;
+	margin-top: 15px;
+	float: left;
+}
+
+nav {
+	float: right;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	display: inline-block;
+	line-height: 70px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+	color: var(--colorBlanco);
+	margin-left: 20px;
+	transition: all 200ms ease;
+}
+
+nav ul li a:active,
+nav ul li a:hover {
+	color: var(--colorSecundario);
+	text-decoration: none;
+}
+
+
+/* Menú movil */
+
+.show-menu {
+	color: #FFF !important;
+}
+
+.menu-movil {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: 100%;
+	background: #FFF;
+	z-index: 1;
+	transition: all 200ms ease;
+}
+
+.menu-movil-on {
+	left: 0%;
+}
+
+.menu-movil ul {
+	list-style: none;
+	margin: 0 30px;
+	padding: 100px 0 0;
+}
+
+.menu-movil ul li {
+	line-height: 50px;
+	font-size: 20px;
+	text-align: center;
+	border-bottom: solid 1px #DDD;
+}
+
+.menu-movil ul li a {
+	color: #16262E;
+}
