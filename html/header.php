@@ -37,7 +37,7 @@
 	</div>
 </header>
 
-<div class="menu-movil">
+<div class="menu-movil d-block d-md-none">
 	<ul>
 		<? if(empty($_SESSION['user_learn'])){ ?>
 			<li><a href="login/"><i class="fa fa-sign-in-alt"></i> Ingresar</a></li>
