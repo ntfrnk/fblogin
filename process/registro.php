@@ -6,8 +6,8 @@ foreach(regBy("users", "email", $pow_post['email']) as $user);
 
 if(count($user)==0){
 
-	$camposU = array("email", "pass", "active");
-	$valoresU = array($pow_post['email'], encrypt($pow_post['pass']), 1);
+	$camposU = array("email", "pass", "active", "created");
+	$valoresU = array($pow_post['email'], encrypt($pow_post['pass']), 1, date('Y-m-d H:i:s'));
 
 	if(insertReg("users", $camposU, $valoresU)){
 

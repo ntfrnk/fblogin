@@ -107,6 +107,7 @@ if($orden == " order by p.apellido asc"){
 							</a>
 						</th>
 						<th scope="col">E-mail</th>
+						<th scope="col">Registrado</th>
 						<th scope="col" class="align-right">Opciones</th>
 					</tr>
 				</thead>
@@ -117,6 +118,16 @@ if($orden == " order by p.apellido asc"){
 							<th scope="row"><?=$user['Id']?></th>
 							<td><?=$user['apellido']?>, <?=$user['nombre']?></td>
 							<td><?=$user['email']?></td>
+							<td>
+								<?
+								if(!is_null($user['created'])){
+									$date = date_create($user['created']);
+									echo date_format($date, 'd/m/Y');
+								} else {
+									echo '00/00/0000';
+								}
+								?>
+							</td>
 							<td class="align-right">
 								<button type="button" onclick="user_edit(<?=$user['Id']?>, '<?=$user['nombre']?>', '<?=$user['apellido']?>', '<?=$user['email']?>');" class="btn btn-info" title="Editar información"><i class="fa fa-edit"></i></button>
 								<a href="config/user/<?=$user['Id']?>/" class="btn btn-info" title="Edición avanzada"><i class="fa fa-users-cog"></i></a>
