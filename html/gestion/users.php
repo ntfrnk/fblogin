@@ -91,6 +91,8 @@ if($orden == " order by p.apellido asc"){
 
 ?>
 
+<span class="hide none" id="view"><?=$pow_get['vista']?></span>
+
 <section id="content">
 
 	<div class="container">
