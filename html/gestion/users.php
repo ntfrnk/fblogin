@@ -2,21 +2,60 @@
 
 if(empty($_SESSION['filters'])){
 
-	$sql = "Select * from pow_users as u, pow_users_perfil as p
-			where u.Id=p.userID";
-
-} else {
-
-	if($_SESSION['filters']=="no"){
-
-		$sql = "Select * from pow_users u, pow_users_perfil p
-				where u.Id=p.userID and 
-				u.Id not in (Select userID from pow_users_cursos group by userID)";
-	
+	if(!isset($pow_post['search'])){
+		$sql = "Select * from pow_users as u, pow_users_perfil as p	where u.Id=p.userID";
 	} else {
+		$sql = "Select * from pow_users as u, pow_users_perfil as p 
+		where (
+		nombre like '%".$pow_post['search']."%' or 
+		apellido like '%".$pow_post['search']."%' or 
+		email like '%".$pow_post['search']."%'
+		) and 
+		u.Id=p.userID";
+	}
+		
+} else {
+		
+	if($_SESSION['filters']=="no"){
+			
+		if(!isset($pow_post['search'])){
+			
+			$sql = "Select * from pow_users u, pow_users_perfil p
+			where u.Id=p.userID and 
+			u.Id not in (Select userID from pow_users_cursos group by userID)";
+			
+		} else {
+			
+			$sql = "Select * from pow_users u, pow_users_perfil p
+			where (
+				nombre like '%".$pow_post['search']."%' or 
+				apellido like '%".$pow_post['search']."%' or 
+				email like '%".$pow_post['search']."%'
+				) and 
+				u.Id=p.userID and 
+				u.Id not in (Select userID from pow_users_cursos group by userID)";
+			
+		}
+			
+	} else {
+		
+		if(!isset($pow_post['search'])){
 
-		$sql = "Select * from pow_users as u, pow_users_perfil as p, pow_users_cursos as c
-				where u.Id=p.userID and u.Id=c.userID and c.cursoID='".$_SESSION['filters']."'";
+			$sql = "Select * from pow_users as u, pow_users_perfil as p, pow_users_cursos as c
+					where u.Id=p.userID and u.Id=c.userID and c.cursoID='".$_SESSION['filters']."'";
+					
+		} else {
+			
+			$sql = "Select * from pow_users as u, pow_users_perfil as p, pow_users_cursos as c
+			where (
+			nombre like '%".$pow_post['search']."%' or 
+			apellido like '%".$pow_post['search']."%' or 
+			email like '%".$pow_post['search']."%'
+			) and 
+			u.Id=p.userID and u.Id=c.userID and c.cursoID='".$_SESSION['filters']."'";
+
+
+		}
 
 	}
 
@@ -69,10 +108,7 @@ if($orden == " order by p.apellido asc"){
 		</div>
 
 		<div class="marT20 row bDDD padTB10">
-			<div class="col-2 lh34">
-				Filtrar por curso: <span class="hide" id="view">users</span>
-			</div>
-			<div class="col-5">
+			<div class="col-4">
 				<select class="form-control" id="filtro-curso">
 					<option value="0">Todos los usuarios</option>
 					<optgroup label="Usuarios inscriptos">
@@ -85,7 +121,17 @@ if($orden == " order by p.apellido asc"){
 					<option value="no"<?=$sno?>>Usuarios sin inscripciones</option>
 				</select>
 			</div>
-			<div class="col-5 lh36 align-right">
+			<div class="col-1"></div>
+			<div class="col-4">
+				<form action="<?=$pow_base?>gestion/<?=$pow_get['vista']?>/" method="POST" class="input-group">
+					<input type="text" class="form-control" value="<?=$pow_post['search']?>" placeholder="Buscar usuario" name="search" id="search" autocomplete="off">
+					<div class="input-group-append">
+						<button id="search-do" type="submit" class="btn btn-secondary">Buscar</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-1"></div>
+			<div class="col-2 lh36 align-right">
 				<a href="process/exportar.php" class="btn btn-primary btn-sm" title="Exportar datos en Excel">
 					<i class="fa fa-download"></i> Descargar datos
 				</a>
