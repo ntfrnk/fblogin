@@ -13,7 +13,7 @@
 
 */
 
-$pow_location = "local";
+$pow_location = "remote";
 $pow_language = "es";
 
 
