@@ -106,9 +106,11 @@ $preguntas = listReg("cursos_clases_preguntas", "where claseID='".$class['Id']."
 									}
 									?>
 									<img src="<?=$img_video?>" class="img-fluid" />
-									<button type="button" class="playbutton"><i class="fa fa-play"></i></button>
+									<button type="button" class="playbutton">
+										<i class="fa fa-play"></i>
+									</button>
 								</div>
-							</figure>					
+							</figure>
 						</div>
 						<div class="marT0 marB0 d-block d-md-none align-center">
 							<a href="cursos/list/<?=$curso['Id']?>/" class="d-block d-md-none btn btn-secondary block">« Volver al listado de clases</a>
@@ -230,9 +232,18 @@ $preguntas = listReg("cursos_clases_preguntas", "where claseID='".$class['Id']."
 		</div>
 		
 	</div>
-	
-	<div class="hide" id="datavid">
-		<?=video_player($class['video'])?>
-	</div>
 
 </section>
+
+<div class="rp-cont">
+
+	<div class="rp-box">
+		<video id="videoplayer" class="video-js rp-player" controls data-setup="{}">
+			<source src="<?=md5(time())?><?=$class['video']?><?=md5(rand(0,9))?>_<?=md5(mt_rand(10,99))?>/" type="video/mp4" />
+			<p class="vjs-no-js">
+				Este navegador no soporta la reproducción de videos.
+			</p>
+		</video>
+	</div>
+
+</div>

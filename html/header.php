@@ -65,17 +65,17 @@
 </div>
 
 <?
-
+/*
 if(!empty($_SESSION['user_learn'])){
 
 $sql = "Select * from pow_users as u, pow_users_perfil as p 
 		where u.Id=p.userID and u.Id='".$_SESSION['user_learn']."'";
 $users = query($sql);
 foreach($users as $userInfo);
-
+*/
 ?>
 
-<div aria-label="breadcrumb">
+<!-- <div aria-label="breadcrumb">
 	<div class="breadcrumb col-12 marB0">
 		<div class="container align-right d-none d-md-block">
 			<span class="breadcrumb-item active">
@@ -88,6 +88,6 @@ foreach($users as $userInfo);
 			</span>
 		</div>
 	</div>
-</div>
+</div> -->
 
-<? } ?>
+<? //} ?>

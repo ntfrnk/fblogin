@@ -14,4 +14,7 @@
 	<link rel="stylesheet" href="assets/styles/theme.css?v=2020-04-09">
 	<link rel="stylesheet" href="assets/styles/responsive.css">
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
+
+	<link href="https://vjs.zencdn.net/7.8.2/video-js.css" rel="stylesheet" />
+
 </head>

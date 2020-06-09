@@ -13,7 +13,7 @@
 
 */
 
-$pow_location = "remote";
+$pow_location = "local";
 $pow_language = "es";
 
 
@@ -187,7 +187,7 @@ $pow_base = $pow_protocol;
 $pow_base.= $pow_domain;
 $pow_base.= $pow_subdomain;
 
-$pow_base = 'http://sd-1783130-h00001.ferozo.net/';
+//$pow_base = 'http://sd-1783130-h00001.ferozo.net/';
 
 // Se define la variable general de rutas físicas
 $pow_root = $pow_document_root;

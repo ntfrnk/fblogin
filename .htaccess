@@ -9,5 +9,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 DirectoryIndex index.php index.html
 
 RewriteRule ^([a-z]+)/([a-z]+)/([0-9]+)/$ index.php?seccion=$1&Id=$3&vista=$2 [L]
-RewriteRule ^(.*)/(.*)/$ index.php?seccion=$1&vista=$2 [L]
-RewriteRule ^(.*)/$ index.php?seccion=$1 [L]
+RewriteRule ^([a-z]+)/(.*)/$ index.php?seccion=$1&vista=$2 [L]
+RewriteRule ^([a-z]+)/$ index.php?seccion=$1 [L]
+
+
+RewriteRule ^([a-zA-Z0-9]{32})(.*)([a-zA-Z0-9]{32})_([a-zA-Z0-9]{32})/$ videos/clase-$2.mp4 [L]

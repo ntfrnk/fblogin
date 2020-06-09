@@ -1,19 +1,29 @@
 
 $(document).on('ready', function(){
+
+	$("body").on("contextmenu",function(e){
+        return false;
+	});
+	
+	$('body').bind('cut copy paste', function (e) {
+        e.preventDefault();
+	});
 	
 	$('.playbutton').on('click', function(){
-
-		code = $('#codevideo').html();
-		type = $('#typevideo').html();
-
-		if(type=="default"){
-			player = '<div class="embed-responsive embed-responsive-16by9" style="position: relative;"><iframe src="https://mega.nz/embed#!' + code + '" class="embed-responsive-item" ></iframe><div class="nooptions"></div></div>';
-		} else {
-			player = '<div class="embed-responsive embed-responsive-16by9" style="position: relative;"><iframe src="https://mega.nz/embed/' + code + '" class="embed-responsive-item" ></iframe><div class="nooptions"></div></div>';
-		}
-		
-		$('#doplayer').html(player);
+		code = $('#code').html();
+		$('#videoplayer').attr('src', code);
+		$('.rp-cont').show();
+		playPause();
 		
 	});
 
 });
+
+var myVideo = document.getElementById("videoplayer");
+
+function playPause() {
+  if (myVideo.paused) 
+    myVideo.play(); 
+  else 
+    myVideo.pause(); 
+}
