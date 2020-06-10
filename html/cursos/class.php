@@ -239,12 +239,12 @@ $preguntas = listReg("cursos_clases_preguntas", "where claseID='".$class['Id']."
 
 	<div class="rp-box">
 		<video id="videoplayer" class="video-js rp-player" controls data-setup="{}">
-			<!-- <source src="<?=md5(time())?><?=$class['video']?><?=md5(rand(0,9))?>_<?=md5(mt_rand(10,99))?>/" type="video/mp4" /> -->
-			<source src="<?=md5(time())?>044<?=md5(rand(0,9))?>_<?=md5(mt_rand(10,99))?>/" type="video/mp4" />
+			<source src="<?=md5(time())?><?=$class['video']?><?=md5(rand(0,9))?>_<?=md5(mt_rand(10,99))?>/" type="video/mp4" />
 			<p class="vjs-no-js">
 				Este navegador no soporta la reproducción de videos.
 			</p>
 		</video>
+		<a href="javascript:;" onclick="closePlayer()" class="block marT10">[ Cerrar reproductor ]</a>
 	</div>
 
 </div>

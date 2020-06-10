@@ -19,6 +19,10 @@ $(document).on('ready', function(){
 
 });
 
+function closePlayer(){
+	$('.rp-cont').hide();
+}
+
 var myVideo = document.getElementById("videoplayer");
 
 function playPause() {
