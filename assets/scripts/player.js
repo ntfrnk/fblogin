@@ -21,6 +21,7 @@ $(document).on('ready', function(){
 
 function closePlayer(){
 	$('.rp-cont').hide();
+	vidPause();
 }
 
 var myVideo = document.getElementById("videoplayer");
@@ -30,4 +31,12 @@ function playPause() {
     myVideo.play(); 
   else 
     myVideo.pause(); 
+}
+
+function vidPlay() {
+	myVideo.play();
+}
+
+function vidPause() {
+	myVideo.pause();
 }
