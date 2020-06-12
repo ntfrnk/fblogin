@@ -13,7 +13,7 @@ $tareas = listReg("users_tareas", "where userID='".$pow_post['Id']."' and estado
 		<? foreach($tareas as $tarea){ ?>
 
 			<div class="padT10 padB5 padLR20 marB15 border-box">
-				<strong>Clase: </strong><?=campoRegById("cursos_clases", $tarea['claseID'], "titulo")?>
+				<strong>Clase: </strong><?=campoRegById("cursos_clases", $tarea['claseID'], "titulo")?> (<?=$tarea['claseID']?>)
 				<br><strong>Estado: </strong>
 				<? if($tarea['estado']==1){ ?>
 					<p class="badge badge-warning inline-block">Pendiente de revisión</p> &nbsp; 
