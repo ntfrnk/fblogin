@@ -10,6 +10,15 @@
 
 <? if($pow_get['seccion']=='cursos' && $pow_get['vista']=='class') : ?>
 	<script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
+	<script>
+		$("body").on("contextmenu",function(e){
+			return false;
+		});
+		
+		$('body').bind('cut copy paste', function (e) {
+			e.preventDefault();
+		});
+	</script>
 <? endif; ?>
 
 <? if(!empty($_SESSION['uploadeado'])){ ?>
