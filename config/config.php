@@ -13,7 +13,7 @@
 
 */
 
-$pow_location = "local";
+$pow_location = "remote";
 $pow_language = "es";
 
 
@@ -69,7 +69,7 @@ else :
 	/* CONFIGURACIÓN DE PANEL */
 
 	// Protocolo del servidor | Ej: "http://" o "https://"
-	$pow_protocol = "http://";
+	$pow_protocol = "https://";
 
 	// Nombre del servidor | ej: superpow.net
 	$pow_domain = $_SERVER['SERVER_NAME'];
@@ -90,13 +90,13 @@ else :
 	$pow_mysql_host = "localhost";
 
 	// Nombre de la base de datos
-	$pow_mysql_database = "epasi_db";
+	$pow_mysql_database = "epasinew_db";
 
 	// Nombre de usuario de la base de datos
-	$pow_mysql_user = "epasi_db";
+	$pow_mysql_user = "epasinew_db";
 
 	// Contraseña de usuario de la base de datos
-	$pow_mysql_password = "Epasi2020*";
+	$pow_mysql_password = "Daniel412*";
 
 endif;
 
@@ -186,8 +186,6 @@ foreach ($_POST as $key => $value) {
 $pow_base = $pow_protocol;
 $pow_base.= $pow_domain;
 $pow_base.= $pow_subdomain;
-
-//$pow_base = 'http://sd-1783130-h00001.ferozo.net/';
 
 // Se define la variable general de rutas físicas
 $pow_root = $pow_document_root;
