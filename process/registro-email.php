@@ -13,6 +13,8 @@ if(count($user)!=0){
     include("mail/code.php");
     include("send-mail.php");
 
+    echo "ok";
+
 } else {
 
     echo "nomail";
