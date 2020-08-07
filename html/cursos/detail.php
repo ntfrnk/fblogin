@@ -70,8 +70,11 @@ $state = cursando_estado($_SESSION['user_learn'], $curso['Id']);
 										<? endif; ?>
 									<? } ?>
 								<? } else { ?>
-									<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
-									<? $vista = "ok"; ?>
+									<? if($clase['inicio']<=date('Y-m-d')){ ?>
+										<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
+									<? } else { ?>
+										<li><?=$clase['titulo']?></li>
+									<? } ?>
 								<? } ?>
 
 							<? } ?>

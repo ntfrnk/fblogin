@@ -7,9 +7,9 @@ foreach(regById("cursos", $_SESSION['inscripcion']) as $curso);
 
 if($pow_get['Id']==200 || $pow_get['Id']==210){
 
-    foreach(listReg("users_cursos", "where userID='".$_SESSION['user_learn']."' and cursoID='".$_SESSION['inscripcion']."'", '1,0') as $insc);
+    foreach(listReg("users_cursos", "where userID='".$_SESSION['user_learn']."' and cursoID='".$_SESSION['inscripcion']."'", '1,0', 'rand()') as $insc);
 
-    if(count($inscr)!=0 && $insc['estado']==1){
+    if($insc['estado']==1){
 
         _updateRegs("users_cursos", 
             array(
