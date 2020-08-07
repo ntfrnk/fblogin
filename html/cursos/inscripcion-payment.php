@@ -4,24 +4,57 @@
 
 foreach(regById("cursos", $_SESSION['inscripcion']) as $curso);
 
-if($pow_get['Id']==200){
-    _updateRegs("users_cursos", 
-        array(
-            'estado' => 2
-        ), 
-        array(
-            'userID' => $_SESSION['user_learn'], 
-            'cursoID' => $_SESSION['inscripcion']
-        )
-    );
-}
 
+if($pow_get['Id']==200 || $pow_get['Id']==210){
 
-if($pow_get['Id']==200){
+    foreach(listReg("users_cursos", "where userID='".$_SESSION['user_learn']."' and cursoID='".$_SESSION['inscripcion']."'", '1,0') as $insc);
+
+    if(count($inscr)!=0 && $insc['estado']==1){
+
+        _updateRegs("users_cursos", 
+            array(
+                'estado' => 2
+            ), 
+            array(
+                'userID' => $_SESSION['user_learn'], 
+                'cursoID' => $_SESSION['inscripcion']
+            )
+        );
+
+        include("mail/nuevo-inscripto.php");
+        include("send-mail.php");
+
+    }
+    
     $color = 'success';
     $titulo = 'Inscripción exitosa';
     $resp_titulo = '¡Tu pago fue aceptado!';
     $resp_texto = 'El pago que realizaste impactó correctamente en nuestro sistema, y ya se encuentra habilitada tu matrícula para comenzar a cursar.';
+
+    if($pow_get['Id']==200){
+        $medio_pago = "Mercado Pago";
+    } else {
+        $medio_pago = "Paypal";
+    }
+
+    $pago = listReg("users_pagos", "where userID='".$_SESSION['user_learn']."' and cursoID='".$_SESSION['inscripcion']."'", '1,0');
+
+    if(count($pago)==0){
+
+        _insertReg("users_pagos", 
+            array(
+                'userID' => $_SESSION['user_learn'], 
+                'cursoID' => $_SESSION['inscripcion'],
+                'medio' => $medio_pago,
+                'estado' => 2
+            )
+        );
+        
+        include("mail/nuevo-pago.php");
+        include("send-mail.php");
+
+    }
+
 } elseif($pow_get['Id']==300) {
     $color = 'warning';
     $titulo = 'Inscripción pendiente';

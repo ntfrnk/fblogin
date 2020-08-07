@@ -53,6 +53,10 @@ foreach($valores2 as $valor){
     }
 }
 
+if($_SESSION['u']['perfil']['proaborto']=='A favor'){
+    $v += 1;
+}
+
 // Pregunto si existe declaración
 
 $dec = regBy("users_declaracion", "userID", $_SESSION['user_learn']);
@@ -74,10 +78,16 @@ if(empty($dec)){
 }
 
 if($v != 0){
-    send_mail('confirmar', $_SESSION['user_learn']);
+    
+    include("mail/confirmar.php");
+	include("send-mail.php");
+
     header("Location: ".$pow_base."cursos/inscripcion-procesando/");
+
 } else {
+
     header("Location: ".$pow_base."cursos/inscripcion-final/");
+
 }
 
 ?>
