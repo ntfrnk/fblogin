@@ -3,14 +3,14 @@
 if(empty($_SESSION['filters'])){
 
 	if(!isset($pow_post['search'])){
-		$sql = "Select * from pow_users as u, pow_users_perfil as p	where u.Id=p.userID";
+		$sql = "Select * from pow_users as u, pow_users_perfil as p	where u.email_ok!=1 and  u.Id=p.userID";
 	} else {
 		$sql = "Select * from pow_users as u, pow_users_perfil as p 
 		where (
 		nombre like '%".$pow_post['search']."%' or 
 		apellido like '%".$pow_post['search']."%' or 
 		email like '%".$pow_post['search']."%'
-		) and 
+		) and u.email_ok!=1 and 
 		u.Id=p.userID";
 	}
 		
@@ -21,7 +21,7 @@ if(empty($_SESSION['filters'])){
 		if(!isset($pow_post['search'])){
 			
 			$sql = "Select * from pow_users u, pow_users_perfil p
-			where u.Id=p.userID and 
+			where u.Id=p.userID and u.email_ok!=1 and 
 			u.Id not in (Select userID from pow_users_cursos group by userID)";
 			
 		} else {
@@ -32,7 +32,7 @@ if(empty($_SESSION['filters'])){
 				apellido like '%".$pow_post['search']."%' or 
 				email like '%".$pow_post['search']."%'
 				) and 
-				u.Id=p.userID and 
+				u.Id=p.userID and u.email_ok!=1 and 
 				u.Id not in (Select userID from pow_users_cursos group by userID)";
 			
 		}
@@ -42,7 +42,7 @@ if(empty($_SESSION['filters'])){
 		if(!isset($pow_post['search'])){
 
 			$sql = "Select * from pow_users as u, pow_users_perfil as p, pow_users_cursos as c
-					where u.Id=p.userID and u.Id=c.userID and c.cursoID='".$_SESSION['filters']."'";
+					where u.Id=p.userID and u.Id=c.userID and u.email_ok!=1 and c.cursoID='".$_SESSION['filters']."'";
 					
 		} else {
 			
@@ -51,7 +51,7 @@ if(empty($_SESSION['filters'])){
 			nombre like '%".$pow_post['search']."%' or 
 			apellido like '%".$pow_post['search']."%' or 
 			email like '%".$pow_post['search']."%'
-			) and 
+			) and u.email_ok!=1 and 
 			u.Id=p.userID and u.Id=c.userID and c.cursoID='".$_SESSION['filters']."'";
 
 
