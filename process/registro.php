@@ -26,6 +26,10 @@ if(count($user)==0){
 
 			$_SESSION['registro'] = "ok";
 			$_SESSION['email_code'] = $pow_post['email'];
+
+			include("mail/code.php");
+			include("send-mail.php");
+
 			echo "ok";
 
 		} else {
