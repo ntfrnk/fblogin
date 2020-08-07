@@ -11,7 +11,7 @@ if(count($user)!=0){
     updateReg($user['Id'], "users", array("email_code"), array($code));
 
     include("mail/code.php");
-    include("send_mail.php");
+    include("send-mail.php");
 
 } else {
 
