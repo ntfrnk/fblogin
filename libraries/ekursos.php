@@ -129,8 +129,6 @@ function faltanDatos($userID, $ver){
 		"nacionalidad" => "personal",
 		"religion" => "perfil",
 		"proaborto" => "perfil",
-		//"tratamiento" => "perfil",
-		//"medicacion" => "perfil",
 		"trabajo" => "perfil",
 		"referencia1_nombre" => "referencia",
 		"referencia1_email" => "referencia",
@@ -138,8 +136,7 @@ function faltanDatos($userID, $ver){
 		"referencia2_nombre" => "referencia",
 		"referencia2_email" => "referencia",
 		"referencia2_celular" => "referencia",
-		"razones" => "perfil",
-		"concepcion" => "perfil"
+		"razones" => "perfil"
 	);
 	$campos_vacios = "";
 	foreach($columnas as $key => $col){
