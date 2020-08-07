@@ -1,4 +1,6 @@
-<html>
+<?
+
+$html = '<html>
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<style>
@@ -37,7 +39,7 @@
 				
 				<div class="nw-texto">
 					
-					<?=$text?>
+					'.$text.'
 
 				</div>
 
@@ -48,4 +50,6 @@
 		</div>
     </body>
     
-</html>
+</html>';
+
+?>
