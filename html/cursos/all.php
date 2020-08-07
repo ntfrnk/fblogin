@@ -7,6 +7,11 @@
 			<? foreach(listReg("cursos", " where active=1", "10,0", "Id,asc") as $curso){ ?>
 
 				<?
+				$class = listReg("cursos_clases", "where cursoID='".$curso['Id']."'", '', 'rand()');
+				$clases = count($class);
+				?>
+
+				<?
 
 				$curso_estado = cursando_estado($_SESSION['user_learn'], $curso['Id']);
 
@@ -21,23 +26,20 @@
 				$linkcurso = "cursos/detail/".$curso['Id']."/";
 
 				?>
-
-				<? if($curso['cierre']==1){ ?>
 					
-					<? if($curso_estado!=0){ ?>
+				<? if($curso_estado!=0){ ?>
 
-						<div class="col-12 col-md-4 item-cursos align-center">
-							<div class="box">
-								<a href="<?=$linkcurso?>" class="">
-									<div class="middler padLR20">
-										<h3 class="f24"><?=$curso['nombre']?></h3>
-										<p><?=$state?></p>
-									</div>
-								</a>
-							</div>
+					<div class="col-12 col-md-4 item-cursos align-center">
+						<div class="box">
+							<a href="<?=$linkcurso?>" class="">
+								<div class="middler padLR20">
+									<h3 class="f24"><?=$curso['nombre']?></h3>
+									<p><?=$state?></p>
+									<p class="mar0">Precio: <b><?=$curso['costo']?> USD</b><br>Cantidad de clases: <b><?=$clases?></b></p>
+								</div>
+							</a>
 						</div>
-
-					<? } ?>
+					</div>
 
 				<? } else { ?>
 			
@@ -47,12 +49,15 @@
 								<div class="middler padLR20">
 									<h3 class="f24"><?=$curso['nombre']?></h3>
 									<p><?=$state?></p>
+									<p class="mar0">Precio: <b><?=$curso['costo']?> USD</b><br>Cantidad de clases: <b><?=$clases?></b></p>
 								</div>
 							</a>
 						</div>
 					</div>
 
 				<? } ?>
+
+				<?unset($clases)?>
 
 			<? } ?>
 

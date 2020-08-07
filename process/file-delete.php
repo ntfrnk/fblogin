@@ -19,10 +19,12 @@ if($pow_post['tipo']=="ddjj"){
 $new_name = $path_upload.$pow_post['nombre'];
 
 if(unlink($new_name)){
-	echo "ok";
+	echo 'ok';
+	$_SESSION['resp'] = 'delok';
 	$_SESSION['upldoc'] = 1;
 } else {
 	echo "err";
+	$_SESSION['resp'] = 'error';
 }
 
 ?>

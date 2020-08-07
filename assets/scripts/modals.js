@@ -206,12 +206,14 @@ function curso_save_new(){
 	nombre = $('#curso-new-nombre').val();
 	descripcion = $('#curso-new-descripcion').val();
 	costo = $('#curso-new-costo').val();
-	fecha = $('#curso-new-fecha').val();
+	codigo_paypal = $('#curso-new-codigo-paypal').val();
+	codigo_mp = $('#curso-new-codigo-mp').val();
 	$.post('process/curso-save.php', {
 		'nombre':nombre,
 		'descripcion':descripcion,
 		'costo':costo,
-		'fecha':fecha
+		'codigo_paypal':codigo_paypal,
+		'codigo_mp':codigo_mp
 	}, function(resp){
 		if(resp=="ok"){
 			window.location.reload();
@@ -232,14 +234,16 @@ function curso_save(){
 	nombre = $('#curso-edit-nombre').val();
 	descripcion = $('#curso-edit-descripcion').val();
 	costo = $('#curso-edit-costo').val();
-	fecha = $('#curso-edit-fecha').val();
+	codigo_paypal = $('#curso-edit-codigo-paypal').val();
+	codigo_mp = $('#curso-edit-codigo-mp').val();
 	id = $('#curso-edit-id').val();
 	$.post('process/curso-save.php', {
 		'Id':id,
 		'nombre':nombre,
 		'descripcion':descripcion,
 		'costo':costo,
-		'fecha':fecha
+		'codigo_paypal':codigo_paypal,
+		'codigo_mp':codigo_mp
 	}, function(resp){
 		if(resp=="ok"){
 			window.location.reload();
@@ -299,14 +303,10 @@ function curso_clone_ok(cursoID){
 function clase_save_new(){
 	titulo = $('#clase-new-titulo').val();
 	video = $('#clase-new-video').val();
-	inicio = $('#clase-new-inicio').val();
-	final = $('#clase-new-final').val();
 	cursoID = $('#clase-new-cursoID').val();
 	$.post('process/clase-save.php', {
 		'titulo':titulo,
 		'video':video,
-		'inicio':inicio,
-		'final':final,
 		'cursoID':cursoID
 	}, function(resp){
 		if(resp=="ok"){
@@ -327,15 +327,11 @@ function clase_edit(id){
 function clase_save(){
 	titulo = $('#clase-edit-titulo').val();
 	video = $('#clase-edit-video').val();
-	inicio = $('#clase-edit-inicio').val();
-	final = $('#clase-edit-final').val();
 	id = $('#clase-edit-id').val();
 	$.post('process/clase-save.php', {
 		'Id':id,
 		'titulo':titulo,
-		'video':video,
-		'inicio':inicio,
-		'final':final
+		'video':video
 	}, function(resp){
 		if(resp=="ok"){
 			window.location.reload();

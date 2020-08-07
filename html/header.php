@@ -21,7 +21,7 @@
 							<? } ?>
 						</a>
 					</li>
-					<li><a href="config/"><i class="fa fa-cog"></i> Mis datos</a></li>
+					<li><a href="config/data-personal/"><i class="fa fa-cog"></i> Mis datos</a></li>
 					<li><a href="logout/"><i class="fa fa-sign-out-alt"></i> Salir</a></li>
 				<? } ?>
 			</ul>
@@ -30,7 +30,7 @@
 			<a href="javascript:;" class="show-menu"><i class="fa fa-bars"></i></a>
 		</div>
 		<div class="logo" style="font-family: Muli;">
-			<a href="<?=$pow_base?>" class="f40 cFFF lh70 bold" style="text-decoration: none;">
+			<a href="<?=$pow_base?>" class="f40 text-white lh70 bold" style="text-decoration: none;">
 				EPASI<SMALL class="f18" style="font-family: Fjalla One;"> EDUCACIÓN</SMALL>
 			</a>
 		</div>

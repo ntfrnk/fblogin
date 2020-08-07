@@ -39,32 +39,18 @@ $state = cursando_estado($_SESSION['user_learn'], $curso['Id']);
 						<ul class="items marT20 f17 lh32">
 							<? foreach($clases as $clase){ ?>
 
-								<?
-
-								$hoy = strtotime(date("d-m-Y",time()));
-								$finicio = substr($clase['inicio'],0,10);
-								$inicio = strtotime($finicio);
-								$ffinal = substr($clase['final'],0,10);
-								$final = strtotime($ffinal);
-
-								$comienza = date_create($finicio);
-								$termina = date_create($ffinal);
-
-								?>
-
-								<? if($state!=2){ ?>
-									<li><?=$clase['titulo']?></li>
+								<? if(yala($_SESSION['user_learn'], $clase['Id'])){ ?>
+									<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
+									<? $vista = "ok"; ?>
 								<? } else { ?>
-									<? if($hoy>=$inicio && $hoy<=$final){ ?>
-										<li><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?><small>[Vigente hasta el <?=date_format($termina, "d/m/Y")?>]</small></a></li>
-									<? } else { ?>
-										<? if($hoy<$inicio){ ?>
-											<li><?=$clase['titulo']?> <small>[Disponible desde el <?=date_format($comienza, "d/m/Y")?>]</small></li>
-										<? } else { ?>
-											<li><?=$clase['titulo']?> <small>[Caducó el <?=date_format($termina, "d/m/Y")?>]</small></li>
-										<? } ?>
-									<? } ?>
+									<? if($vista=="ok"): ?>
+										<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
+										<? $vista = "none"; ?>
+									<? else : ?>
+										<li><?=$clase['titulo']?></li>
+									<? endif; ?>
 								<? } ?>
+								
 							<? } ?>
 						</ul>
 					</div>

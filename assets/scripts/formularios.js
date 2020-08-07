@@ -36,7 +36,7 @@ $(function(){
 				'pass':pass
 			}, function(resp){
 				if(resp=="ok"){
-					window.location = pow_base + 'login/';
+					window.location = pow_base + 'registro/code/';
 				} else if(resp=="yala") {
 					msjError("email-msj", "Este correo ya está en uso.");
 					$('.spinner-btn').removeClass('spinner-btn-on');
@@ -92,12 +92,15 @@ $(function(){
 					$('#login-send>span').html('Ingresar');
 					$('.login-resp-text').html('Usuario bloqueado.');
 					$('.login-resp').addClass('login-resp-on');
-					console.log("Usuario bloqueado.");
+				} else if(resp=="unconfirmed"){
+					$('.spinner-btn').removeClass('spinner-btn-on');
+					$('#login-send>span').html('Ingresar');
+					$('.login-resp-text').html('Este correo electrónico aún no fue validado. <a href="registro/validate/">¿Quieres validarlo ahora?</a>');
+					$('.login-resp').addClass('login-resp-on');
 				} else {
 					$('.spinner-btn').removeClass('spinner-btn-on');
 					$('#login-send>span').html('Ingresar');
 					$('.login-resp').addClass('login-resp-on');
-					console.log("Error de validación.");
 				}
 			});
 		}

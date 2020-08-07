@@ -42,12 +42,14 @@
 
 .form-input {
   position: relative;
-  padding: 12px 0px 5px 0;
+  padding: 10px 15px;
   width: 100%;
+  border: solid 1px #CCC;
+  border-radius: 3px;
   outline: 0;
-  border: 0;
   box-shadow: 0 1px 0 0 #e5e5e5;
   background: transparent;
+  border-bottom-width: 1px;
 }
 
 .form-input::placeholder {
@@ -55,7 +57,7 @@
 }
 
 textarea.form-input {
-  border: solid 1px #EEE;
+  border: solid 1px #CCC;
   padding: 10px 15px;
 }
 

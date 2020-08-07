@@ -112,34 +112,34 @@ function faltanDatos($userID, $ver){
 		where u.Id=p.userID and u.Id='".$userID."'";
 	$usuario = query($sql);
 	foreach($usuario as $user);
+
 	$columnas = array(
-		"apellido" => "Apellido",
-		"nombre" => "Nombre",
+		"apellido" => "personal",
+		"nombre" => "personal",
 		"email" => "E-mail",
-		"nacimiento" => "Fecha de nacimiento",
-		"dni" => "Identificación estatal",
-		"estado_civil" => "Estado civil",
-		"pais" => "País",
-		"provincia" => "Provincia",
-		"ciudad" => "Ciudad",
-		"direccion" => "Dirección",
-		"cp" => "Código postal",
-		"celular" => "Celular",
-		//"fijo" => "Teléfono fijo",
-		"nacionalidad" => "Nacionalidad",
-		"religion" => "Religión",
-		"proaborto" => "Postura ante el aborto",
-		"tratamiento" => "Tratamientos psicológicos / psiquiátricos",
-		"medicacion" => "Consumo de medicamentos",
-		"trabajo" => "Experiencia en trabajo con niños",
-		"referencia1_nombre" => "Persona de referencia Nº 1: Nombre",
-		"referencia1_email" => "Persona de referencia Nº 1: E-mail",
-		"referencia1_celular" => "Persona de referencia Nº 1: Celular",
-		"referencia2_nombre" => "Persona de referencia Nº 2: Nombre",
-		"referencia2_email" => "Persona de referencia Nº 2: E-mail",
-		"referencia2_celular" => "Persona de referencia Nº 2: Celular",
-		"razones" => "Razones para formarse como preventor",
-		"concepcion" => "Concepción de familia"
+		"nacimiento" => "personal",
+		"dni" => "personal",
+		"estado_civil" => "personal",
+		"pais" => "contacto",
+		"provincia" => "contacto",
+		"ciudad" => "contacto",
+		"direccion" => "contacto",
+		"cp" => "contacto",
+		"celular" => "contacto",
+		"nacionalidad" => "personal",
+		"religion" => "perfil",
+		"proaborto" => "perfil",
+		"tratamiento" => "perfil",
+		"medicacion" => "perfil",
+		"trabajo" => "perfil",
+		"referencia1_nombre" => "referencia",
+		"referencia1_email" => "referencia",
+		"referencia1_celular" => "referencia",
+		"referencia2_nombre" => "referencia",
+		"referencia2_email" => "referencia",
+		"referencia2_celular" => "referencia",
+		"razones" => "perfil",
+		"concepcion" => "perfil"
 	);
 	$campos_vacios = "";
 	foreach($columnas as $key => $col){
@@ -162,6 +162,26 @@ function faltanDatos($userID, $ver){
 	}
 }
 
+
+function dataEmpty(){
+
+	$faltan = faltanDatos($_SESSION['user_learn'], 1);
+
+	if(in_array('personal', $faltan)){
+		$go = 'personal';
+	} elseif(in_array('contacto', $faltan)){
+		$go = 'contacto';
+	}  elseif(in_array('perfil', $faltan)){
+		$go = 'perfil';
+	}  elseif(in_array('referencia', $faltan)){
+		$go = 'referencia';
+	}
+
+	return $go;
+
+}
+
+
 function video_player($url){
 	if(strstr($url, "https://mega.nz/#!")){
 		$data[0] = "default";
@@ -175,6 +195,16 @@ function video_player($url){
 	}
 	echo '<span id="typevideo">'.$data[0].'</span>'."\n";
 	echo '<span id="codevideo">'.$data[1].'</span>';
+}
+
+
+function yala($userID, $claseID){
+	$reg = listReg('users_clases_vistas', 'where userID='.$userID.' and claseID='.$claseID, '1,0', 'rand()');
+	if(count($reg)!=0){
+		return true;
+	} else {
+		return false;
+	}
 }
 
 ?>

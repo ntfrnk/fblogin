@@ -6,8 +6,10 @@ foreach(regBy("users", "email", $pow_post['email']) as $user);
 
 if(count($user)==0){
 
-	$camposU = array("email", "pass", "active", "created");
-	$valoresU = array($pow_post['email'], encrypt($pow_post['pass']), 1, date('Y-m-d H:i:s'));
+	$code = mt_rand(100000,999999);
+
+	$camposU = array("email", "pass", "active", "created", "email_ok", "email_code");
+	$valoresU = array($pow_post['email'], encrypt($pow_post['pass']), 1, date('Y-m-d H:i:s'), 1, $code);
 
 	if(insertReg("users", $camposU, $valoresU)){
 
@@ -23,6 +25,7 @@ if(count($user)==0){
 		if(insertReg("users_perfil", $camposP, $valoresP) and insertReg("users_docs", $camposD, $valoresD) and insertReg("users_preventores", $camposPr, $valoresPr)){
 
 			$_SESSION['registro'] = "ok";
+			$_SESSION['email_code'] = $pow_post['email'];
 			echo "ok";
 
 		} else {

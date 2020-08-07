@@ -1,0 +1,118 @@
+
+/*
+** Modificaciones
+*/
+
+.curso-descripcion {
+    overflow: hidden;
+}
+
+
+/*
+** Pasos de inscripción
+*/
+
+.pasos {
+    text-align: center;
+}
+
+.pasos ul {
+    list-style: none;
+    margin: 35px auto 20px;
+    padding: 0px;
+}
+
+.pasos ul li {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 2px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background: var(--colorPrincipal);
+    font-size: 24px;
+    color: #FFF;
+}
+
+.pasos ul li.active {
+    background: var(--colorSecundario);
+}
+
+
+/*
+** Menú de datos de usuario
+*/
+
+.menu-datos {
+    text-align: center;
+}
+
+.menu-datos ul {
+    list-style: none;
+    margin: 35px auto 20px;
+    padding: 0px;
+}
+
+.menu-datos ul li {
+    display: inline-block;
+}
+
+.menu-datos ul li:after {
+    content: "|";
+    margin-left: 5px;
+    margin-right: 5px;
+    color: #000 !important;
+    font-weight: normal !important;
+}
+
+.menu-datos ul li:last-child:after {
+    content: "";
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.menu-datos ul li.active {
+    font-weight: bold;
+    color: var(--colorSecundario);
+}
+
+.alert {
+    text-align: center;
+}
+
+
+/*
+** Formularios
+*/
+
+.form-new {
+    padding: 0px 30px 20px;
+}
+
+@media (max-width: 768px) {
+
+    .card-form-new {
+        border: none !important;
+    }
+
+    .card-form-new .card-body {
+        padding-top: 0px;
+    }
+
+    .form-new {
+        padding: 0px 0px 20px;
+    }
+
+    .card-form-new .btn {
+        margin-top: 10px;
+        width: 100% !important;
+    }
+
+}
+
+.row-form-new label {
+    font-weight: bold;
+}

@@ -8,9 +8,10 @@
 	<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fjalla+One|Muli:400,400i,700,900&display=swap">
 	<link rel="stylesheet" href="assets/styles/base.css">
-	<link rel="stylesheet" href="assets/styles/helpers.css">
+	<link rel="stylesheet" href="assets/styles/helpers.min.css">
 	<link rel="stylesheet" href="assets/styles/pages.css">
 	<link rel="stylesheet" href="assets/styles/special.css?v=2020-03-23">
+	<link rel="stylesheet" href="assets/styles/nuevos.css">
 	<link rel="stylesheet" href="assets/styles/theme.css?v=2020-04-09">
 	<link rel="stylesheet" href="assets/styles/responsive.css">
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">

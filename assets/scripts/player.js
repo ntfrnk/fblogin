@@ -6,10 +6,21 @@ $(document).on('ready', function(){
 		$('#videoplayer').attr('src', code);
 		$('.rp-cont').show();
 		playPause();
-		
+		clase_vista();
 	});
 
 });
+
+function clase_vista(){
+	setTimeout(function(){
+		var claseID = $('#claseID').html();
+		$.post('process/user-clase-vista.php', {'claseID': claseID}, function(resp){
+			$.post('process/user-clase-newlist.php', {'claseID':claseID}, function(res){
+				$('#class-list-side').html(res);
+			});
+		});
+	}, 300000);
+}
 
 function closePlayer(){
 	$('.rp-cont').hide();

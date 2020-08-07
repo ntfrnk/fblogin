@@ -23,6 +23,7 @@ $(function(){
 
 });
 
+
 function user_ok(id){
 	$.post('process/user-approved.php', {
 		'Id':id

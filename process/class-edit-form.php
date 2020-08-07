@@ -29,7 +29,7 @@ $placa = "../upload/placa/".$clase['placa'];
 				<input type="file" id="clase-edit-placa" name="placa" class="form-input">
 			<? } ?>
 		</div>
-		<div class="row">
+		<!-- <div class="row">
 			<div class="form-group col lh50">
 				<label>Inicio:</label>
 			</div>
@@ -44,7 +44,7 @@ $placa = "../upload/placa/".$clase['placa'];
 				<input type="date" id="clase-edit-final" value="<?=$clase['final']?>" name="final" class="form-input" placeholder="Fecha de finalización" autocomplete="off" required>
 				<span class="f12 text-danger msj" id="final-msj"></span>
 			</div>
-		</div>
+		</div> -->
 		<input type="hidden" id="clase-edit-cursoID" value="<?=$clase['cursoID']?>" name="cursoID" value="<?=$pow_get['Id']?>">
 		<input type="hidden" id="clase-edit-id" value="<?=$clase['Id']?>" name="Id">
 		<div class="form-group marT25">

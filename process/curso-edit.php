@@ -14,7 +14,7 @@ foreach(regById("cursos", $pow_post['Id']) as $curso);
 	<textarea id="curso-edit-descripcion" rows="6" class="form-input" placeholder="Descripción" autocomplete="off" required><?=$curso['descripcion']?></textarea>
 	<span class="f12 text-danger msj" id="descripcion-edit-msj"></span>
 </div>
-<div class="row">
+<!-- <div class="row">
 	<div class="form-group col-6">
 		<input type="date" value="<?=$curso['fecha']?>" id="curso-edit-fecha" class="form-input" placeholder="Fecha" autocomplete="off" required>
 		<span class="f12 text-danger msj" id="fecha-edit-msj"></span>
@@ -23,6 +23,18 @@ foreach(regById("cursos", $pow_post['Id']) as $curso);
 		<input type="number" value="<?=$curso['costo']?>" id="curso-edit-costo" class="form-input" placeholder="Costo (USD)" autocomplete="off" required>
 		<span class="f12 text-danger msj" id="costo-edit-msj"></span>
 	</div>
+</div> -->
+<div class="form-group">
+	<input type="number" id="curso-edit-costo" class="form-input" autocomplete="off" placeholder="Costo (USD)" value="<?=$curso['costo']?>" autocomplete="off" required>
+	<span class="f12 text-danger msj" id="email-msj"></span>
+</div>
+<div class="form-group">
+	<textarea id="curso-edit-codigo-paypal" rows="1" class="form-input" autocomplete="off" placeholder="Código paypal"><?=$curso['codigo_paypal']?></textarea>
+	<span class="f12 text-danger msj" id="codigo-paypal-msj"></span>
+</div>
+<div class="form-group">
+	<textarea id="curso-edit-codigo-mp" rows="1" class="form-input" autocomplete="off" placeholder="Código Mercado Pago"><?=$curso['codigo_mp']?></textarea>
+	<span class="f12 text-danger msj" id="codigo-mp-msj"></span>
 </div>
 <input type="hidden" value="<?=$curso['Id']?>" id="curso-edit-id">
 <div class="form-group marT25">

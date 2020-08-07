@@ -5,6 +5,7 @@
 ***************************************************** */
 
 function query($query){
+	//echo $query;
 	$result = mysql_query($query) or die (mysql_error());
 	while($row = mysql_fetch_assoc($result)){
 		$fila[]= $row;
@@ -92,7 +93,7 @@ function insertReg($modulo,$campos,$valores){
 		return mysql_error();
 	}
 	mysql_free_result($result);
-} 
+}
 
 // ACTUALIZACIÓN DE REGISTRO EN BBDD
 function updateReg($id,$modulo,$campos,$valores){

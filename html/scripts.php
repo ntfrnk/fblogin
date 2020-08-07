@@ -7,6 +7,7 @@
 <script src="assets/scripts/formularios.js"></script>
 <script src="assets/scripts/actions.js?v=2020-04-09"></script>
 <script src="assets/scripts/modals.js?v=2020-03-23"></script>
+<script src="assets/scripts/nuevos.js"></script>
 
 <? if($pow_get['seccion']=='cursos' && $pow_get['vista']=='class') : ?>
 	<script src="https://vjs.zencdn.net/7.8.2/video.js"></script>
@@ -29,11 +30,17 @@
 
 <? } ?>
 
-<? if(!empty($_SESSION['user_learn']) and faltanDatos($_SESSION['user_learn']) and $pow_get['seccion']!="config"){ ?>
+<? //if(!empty($_SESSION['user_learn']) and faltanDatos($_SESSION['user_learn']) and $pow_get['seccion']!="config"){ ?>
 
 	<script type="text/javascript">
-		datosFaltantes();
+		//datosFaltantes();
 	</script>
 
-<? } ?>
+<? //} ?>
+
+<pre>
+	<? dataEmpty(); ?>
+</pre>
+
+
 </div>

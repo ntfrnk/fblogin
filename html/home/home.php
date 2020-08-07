@@ -19,7 +19,7 @@
 
 			<div class="col-12 col-md-4 item-home align-center">
 				<div class="box">
-					<a href="config/" class="padTB50">
+					<a href="config/data-personal/" class="padTB50">
 						<div class="">
 							<i class="fa fa-cog f75"></i>
 						</div>

@@ -63,10 +63,10 @@
 
 </section>
 
-<? if(!empty($_SESSION['user_learn']) and faltanDatos($_SESSION['user_learn']) and $pow_get['seccion']!="config"){ ?>
+<? if($_SESSION['faltan'] && $_SESSION['user_learn']){ ?>
 	<div class="alert alert-danger align-center" role="alert">
 		<div class="container">
-			Faltan algunos de tus datos en nuestro sistema. Por favor complétalos en <a href="config/" class="alert-link">este formulario</a>.
+			Faltan algunos de tus datos en nuestro sistema. Por favor complétalos en este formulario para poder continuar.
 		</div>
 	</div>
 <? } ?>

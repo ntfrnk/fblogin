@@ -8,21 +8,33 @@ if(count($user)!=0){
 
 	if($user['active']==1){
 
-		if($user['pass']==encrypt($pow_post['pass'])){
+		if($user['email_ok']!=1){
 
-			$_SESSION['user_learn'] = $user['Id'];
+			if($user['pass']==encrypt($pow_post['pass'])){
 
-			if($user['admin']==1){
+				foreach(regBy("users_perfil", "userID", $user['Id']) as $perfil);
+
+				$_SESSION['user_learn'] = $user['Id'];
+				$_SESSION['u'] = $user;
+				$_SESSION['u']['perfil'] = $perfil;			
+
+				if($user['admin']==1){
+					
+					$_SESSION['admin_learn'] = 1;
+
+				}
 				
-				$_SESSION['admin_learn'] = 1;
+				echo "ok";
+
+			} else {
+
+				echo "err";
 
 			}
-			
-			echo "ok";
 
 		} else {
 
-			echo "err";
+			echo "unconfirmed";
 
 		}
 

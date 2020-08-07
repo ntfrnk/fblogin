@@ -202,6 +202,14 @@ main {
 	padding: 0;
 }
 
+.items-col {
+	scroll-behavior: smooth;
+    overflow: scroll;
+	height: 440px;
+	padding: 10px 20px;
+	border: solid 1px #CCC;
+}
+
 .items-col li {
 	padding: 5px 0;
 	line-height: 28px;

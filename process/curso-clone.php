@@ -7,8 +7,8 @@ $path_adjuntos = "../upload/material/";
 
 foreach(regById("cursos", $pow_post['Id']) as $curso);
 
-$campos = array("nombre", "costo", "descripcion", "fecha");
-$valores = array("[COPIA] ".$curso['nombre'], $curso['costo'], $curso['descripcion'], $curso['fecha']);
+$campos = array("nombre", "codigo_paypal", "descripcion", "codigo_mp");
+$valores = array("[COPIA] ".$curso['nombre'], $curso['codigo_paypal'], $curso['descripcion'], $curso['codigo_mp']);
 
 if(insertReg("cursos", $campos, $valores)){
 

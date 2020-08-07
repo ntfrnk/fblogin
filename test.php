@@ -1,4 +1,19 @@
-<div class="embed-responsive embed-responsive-16by9" style="position: relative;">
-	<iframe src="https://mega.nz/embed#!' + code + '" class="embed-responsive-item" ></iframe>
-	<div class="nooptions"></div>
-</div>
+<?
+
+include("config/config.php");
+
+$regs = listReg('cursos_clases', 'where cursoID=4', '', 'titulo,asc');
+
+$i = 0;
+foreach($regs as $reg){
+
+	updateReg($reg['Id'], 'cursos_clases', array('orden'), array($i));
+
+	echo ".";
+	$i++;
+
+}
+
+echo "<br>Ok";
+
+?>
