@@ -33,16 +33,24 @@ $preguntas = listReg("cursos_clases_preguntas", "where claseID='".$class['Id']."
 					<ul class="items-col marT20 f17 lh32" id="class-list-side">
 						<? foreach($clases as $clase){ ?>
 
-							<? if(yala($_SESSION['user_learn'], $clase['Id'])){ ?>
-								<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
-								<? $vista = "ok"; ?>
-							<? } else { ?>
-								<? if($vista=="ok"): ?>
+							<? if($curso['Id']!=9){ ?>
+								<? if(yala($_SESSION['user_learn'], $clase['Id'])){ ?>
 									<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
-									<? $vista = "none"; ?>
-								<? else : ?>
+									<? $vista = "ok"; ?>
+								<? } else { ?>
+									<? if($vista=="ok"): ?>
+										<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
+										<? $vista = "none"; ?>
+									<? else : ?>
+										<li><?=$clase['titulo']?></li>
+									<? endif; ?>
+								<? } ?>
+							<? } else { ?>
+								<? if($clase['inicio']<=date('Y-m-d')){ ?>
+									<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
+								<? } else { ?>
 									<li><?=$clase['titulo']?></li>
-								<? endif; ?>
+								<? } ?>
 							<? } ?>
 
 						<? } ?>

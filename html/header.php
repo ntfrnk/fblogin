@@ -58,7 +58,7 @@
 					<? } ?>
 				</a>
 			</li>
-			<li><a href="config/"><i class="fa fa-cog"></i> Mis datos</a></li>
+			<li><a href="config/data-personal/"><i class="fa fa-cog"></i> Mis datos</a></li>
 			<li><a href="logout/"><i class="fa fa-sign-out-alt"></i> Salir</a></li>
 		<? } ?>
 	</ul>
