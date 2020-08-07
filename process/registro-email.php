@@ -13,6 +13,8 @@ if(count($user)!=0){
     include("mail/code.php");
     include("send-mail.php");
 
+    $_SESSION['email_code'] = $pow_post['email'];
+
     echo "ok";
 
 } else {
