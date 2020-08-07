@@ -65,7 +65,7 @@ foreach($posturas as $key => $postura){
                                     <input type="text" name="trabajo" id="trabajo" value="<? if(isset($_SESSION['valores']['trabajo'])) { echo $_SESSION['valores']['trabajo']; } else { echo $_SESSION['u']['perfil']['trabajo']; } ?>" class="form-control a-center col-md-8 col-xs-12" autocomplete="off" required>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new align-center">
-                                    <label for="razones" class="col-md-10 col-xs-12 marT5">Indique las razones por las que quisiera formarse como Preventor/a<br>del Abuso Sexual Infantil <small class="f12">(Mínimo 200 caracteres)</small></label>
+                                    <label for="razones" class="col-md-10 col-xs-12 marT5">Indique las razones por las que quisiera formarse como Preventor/a<br>del Abuso Sexual Infantil <small class="f12">(Máximo 200 caracteres)</small></label>
                                     <textarea name="razones" rows="3" id="razones" class="form-control col-md-8 col-xs-12" required><? if(isset($_SESSION['valores']['razones'])) { echo $_SESSION['valores']['razones']; } else { echo $_SESSION['u']['perfil']['razones']; } ?></textarea>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
