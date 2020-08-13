@@ -27,6 +27,16 @@ if(strstr($med, 'no.') || strstr($med, 'no,') || strstr($med, 'ninguna') || $med
     $medicacion = "";
 }
 
+_updateRegs("users_cursos", 
+    array(
+        'step' => 6
+    ), 
+    array(
+        'userID' => $_SESSION['user_learn'], 
+        'cursoID' => $_SESSION['inscripcion']
+    )
+);
+
 ?>
 
 <section id="content">
@@ -54,13 +64,13 @@ if(strstr($med, 'no.') || strstr($med, 'no,') || strstr($med, 'ninguna') || $med
                 
                 <div class="card">
                     <div class="card-header b">
-                        Acuerdos importantes
+                        Declaración jurada
                     </div>
                     <div class="card-body">
                         <form action="process/user-inscription-sixth.php" method="POST">
                             <div class="padLR80 padTB20">
                                 <div class="form-group row justify-content-center row-form-new a-center">
-                                    <div class="col-12 b">¿Tiene o tuvo alguna adicción sexual?</div>
+                                    <div class="col-12 b">¿Tiene problemas de adicción sexual?</div>
                                     <div class="col-12 marT5">
                                         <input type="radio" name="adiccion_sexual" id="adicsi" value="1" class="marR5" required><label for="adicsi" class="marB0 fw400"> Sí</label> &nbsp; &nbsp; &nbsp;
                                         <input type="radio" name="adiccion_sexual" id="adicno" value="0" class="marR5"><label for="adicno" class="marB0 fw400"> No</label>

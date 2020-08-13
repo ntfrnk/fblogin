@@ -116,3 +116,7 @@ nav ul li a:hover {
 .menu-movil ul li a {
 	color: #16262E;
 }
+
+main {
+	min-height: 550px;
+}

@@ -499,10 +499,10 @@
 
 <div class="pop-box2 none" id="terminos">
 	<a href="javascript:;" onclick="close_modal();" class="pop-dismiss"><i class="fa fa-times"></i></a>
-	<div class="pop-container">
+	<div class="pop-container padB30">
 		<h2>Acuerdo de Términos y condiciones</h2>
 		<div class="form-wrapper">
-			<div class="form-group marT20">
+			<div class="form-group marT20" style="overflow: auto; height: 320px;">
 
 				<p>INFORMACIÓN GENERAL</p>
 				<p>Este sitio web es operado por Fundación EPASI. En todo el sitio, los términos “nosotros”, “nos” y “nuestro” se refieren a Fundación EPASI. La Fundación EPASI ofrece este sitio web, incluyendo toda la información, herramientas y servicios disponibles para ti en este sitio, el usuario, está condicionado a la aceptación de todos los términos, condiciones, políticas y notificaciones aquí establecidos.</p>
@@ -568,7 +568,7 @@
 				<p>Preguntas acerca de los Términos y condiciones del servicio deben ser enviadas a «info@epasieducacion.com».</p>
 			
 			</div>
-			<div class="form-group marT35 align-center">
+			<div class="form-group marT15 align-center">
 				<a href="javascript:;" class="btn btn-secondary" onclick="close_modal();">
 					<span>Aceptar</span>
 				</a>

@@ -80,11 +80,34 @@ if(empty($dec)){
 if($v != 0){
     
     include("mail/confirmar.php");
-	include("send-mail.php");
+    include("send-mail.php");
+
+    include("mail/pendiente.php");
+    include("send-mail.php");
+
+    _updateRegs("users_cursos", 
+        array(
+            'step' => 7
+        ), 
+        array(
+            'userID' => $_SESSION['user_learn'], 
+            'cursoID' => $_SESSION['inscripcion']
+        )
+    );
 
     header("Location: ".$pow_base."cursos/inscripcion-procesando/");
 
 } else {
+
+    _updateRegs("users_cursos", 
+        array(
+            'step' => 8
+        ), 
+        array(
+            'userID' => $_SESSION['user_learn'], 
+            'cursoID' => $_SESSION['inscripcion']
+        )
+    );
 
     header("Location: ".$pow_base."cursos/inscripcion-final/");
 

@@ -30,6 +30,7 @@
 
 	</div-->
 
+	<? include_once("html/footer.php"); ?>
 	<? include_once("html/scripts.php"); ?>
 
 </body>

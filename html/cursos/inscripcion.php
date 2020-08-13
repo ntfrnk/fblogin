@@ -36,7 +36,7 @@ $_SESSION['inscripcion'] = $pow_get['Id'];
 
 $anio = date('Y') - 18;
 
-echo $fecha_max = $anio.'-'.date('m-d');
+$fecha_max = $anio.'-'.date('m-d');
 
 ?>
 

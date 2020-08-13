@@ -24,27 +24,49 @@ if(empty($_SESSION['user_learn'])) {
 
 if($_SESSION['user_learn']){
 
-	$except = array('inscripcion', 'inscripcion-second', 'inscripcion-third', 'inscripcion-fourth', 'inscripcion-fifth', 'inscripcion-sixth', 'all', 'detail', '');
+	$insc = inscription();
 
-	$goto = dataEmpty();
+	if($insc==false){
 
-	if($goto && !in_array($pow_get['vista'], $except)){
+		$except = array('inscripcion', 'inscripcion-second', 'inscripcion-third', 'inscripcion-fourth', 'inscripcion-fifth', 'inscripcion-sixth', 'all', 'detail', '');
 
-		$_SESSION['faltan'] = 1;
+		$goto = dataEmpty();
 
-		if($goto == 'personal' && $pow_get['vista'] != 'data-personal'){
-			header("Location: ".$pow_base."config/data-personal/");
-		} elseif($goto == 'contacto' && $pow_get['vista'] != 'data-contacto'){
-			header("Location: ".$pow_base."config/data-contacto/");
-		} elseif($goto == 'perfil' && $pow_get['vista'] != 'data-perfil'){
-			header("Location: ".$pow_base."config/data-perfil/");
-		} elseif($goto == 'referencia' && $pow_get['vista'] != 'data-referencia'){
-			header("Location: ".$pow_base."config/data-referencia/");
+		if($goto && !in_array($pow_get['vista'], $except)){
+
+			$_SESSION['faltan'] = 1;
+
+			if($goto == 'personal' && $pow_get['vista'] != 'data-personal'){
+				header("Location: ".$pow_base."config/data-personal/");
+			} elseif($goto == 'contacto' && $pow_get['vista'] != 'data-contacto'){
+				header("Location: ".$pow_base."config/data-contacto/");
+			} elseif($goto == 'perfil' && $pow_get['vista'] != 'data-perfil'){
+				header("Location: ".$pow_base."config/data-perfil/");
+			} elseif($goto == 'referencia' && $pow_get['vista'] != 'data-referencia'){
+				header("Location: ".$pow_base."config/data-referencia/");
+			}
+
+		} else {
+
+			unset($_SESSION['faltan']);
+
 		}
 
 	} else {
 
-		unset($_SESSION['faltan']);
+		$pasos = array(
+			'2' => 'second',
+			'3' => 'third',
+			'4' => 'fourth',
+			'5' => 'fifth',
+			'6' => 'sixth',
+			'7' => 'procesando',
+			'8' => 'final'
+		);
+
+		if($pow_get['seccion']!="cursos" && $pow_get['vista']!=$pasos[$insc]){
+			header("Location: ".$pow_base."cursos/inscripcion-".$pasos[$insc]."/");
+		}
 
 	}
 

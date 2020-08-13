@@ -23,7 +23,8 @@ if(_updateRegBy("userID", $_SESSION['user_learn'], "users_perfil", $valores)){
         _insertReg("users_cursos", array(
             'userID' => $_SESSION['user_learn'], 
             'cursoID' => $_SESSION['inscripcion'], 
-            'estado' => '0'
+            'estado' => 0,
+            'step' => 2
         ));
     }
 

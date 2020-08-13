@@ -71,7 +71,7 @@ $next_ok = 0;
                         <div class="padLR30 padTB20">
                             <form action="process/user-inscription-upload.php" method="POST" enctype="multipart/form-data">
                                 <div class="form-group row justify-content-center row-form-new a-center">
-                                    <label class="col-md-10 col-xs-12 marT5">Certificado de antecedentes penales <small class="f13">(o equivalente en su país)</small>: (<a href="javascript:;" onclick="open_alert('Uno de los requisitos para formarse en EPASI es la presentación del Certificado de Antecedentes Penales (Certificado de Buena Conducta) emitido por la policía. Tenga a bien solicitarlo con tiempo y adjuntarlo en este formulario. El mismo no puede tener una antiguedad mayor a un año. En caso de no presentarlo no podra ser certificado como participante.')">?</a>):</label>
+                                    <label class="col-md-10 col-xs-12 marT5">Certificado de antecedentes penales <small class="f13">(o equivalente en su país)</small>: (<a href="javascript:;" onclick="open_alert('Uno de los requisitos para formarse en EPASI es la presentación del Certificado de Antecedentes Penales (Certificado de Buena Conducta) emitido por la policía. Tenga a bien solicitarlo con tiempo y adjuntarlo en este formulario. El mismo no puede tener una antigüedad mayor a un año. El mismo podrá ser presentado durante el cursado. Es requisito para ser certificado como participante.')">?</a>):</label>
                                     <? if($antecedentes): ?>
                                         <div class="col-12">
                                             [Archivo cargado] 
