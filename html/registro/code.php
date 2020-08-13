@@ -10,7 +10,7 @@
 
 			<div class="form-group resp">
 				<p class="f15 lh18 texto">
-					Por favor compia aquí el código de validación que te enviamos a tu correo electrónico.
+					Por favor copia aquí el código de validación que te enviamos a tu correo electrónico.
 				</p>
 			</div>
 
