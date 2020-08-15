@@ -1,5 +1,9 @@
 <?
 
+if(!$_SESSION['inscripcion']){
+    $_SESSION['inscripcion'] = inscription('cursoID');
+}
+
 // Cargo la data del curso
 
 foreach(regById("cursos", $_SESSION['inscripcion']) as $curso);

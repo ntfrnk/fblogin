@@ -205,13 +205,18 @@ function yala($userID, $claseID){
 }
 
 
-function inscription(){
+function inscription($dato=''){
 	foreach(listReg("users_cursos", "where userID='".$_SESSION['user_learn']."' and step not in('9','1','0')", '1,0', 'rand()') as $insc);
 	$step = false;
 	if(count($insc)!=0){
 		$step = $insc['step'];
+		$cursoID = $insc['cursoID'];
 	}
-	return $step;
+	if($dato=='cursoID'){
+		return $cursoID;
+	} else {
+		return $step;
+	}
 }
 
 
