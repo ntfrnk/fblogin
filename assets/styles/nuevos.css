@@ -116,3 +116,28 @@
 .row-form-new label {
     font-weight: bold;
 }
+
+
+/* Correcciones a estilos */
+
+.datauserh4 {
+    margin-top: 20px;
+    border-bottom: solid 1px #CCC;
+}
+
+.datauser {
+    margin-left: 0px !important;
+}
+
+.datauser::before {
+    content: none !important;
+}
+
+.datauser::after {
+    content: "//";
+    padding: 0 10px;
+}
+
+.pop-box2 {
+    z-index: 3 !important;
+}
