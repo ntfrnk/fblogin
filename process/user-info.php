@@ -50,8 +50,8 @@ $birthday = date_create($user['nacimiento']);
 		<span class="datauser"><strong>Acoso sexual:</strong> <? if($declaracion['acosador']==1){ echo 'Sí'; } else { echo 'No'; } ?></span>
 		<span class="datauser"><strong>Acusaciones de acoso sexual:</strong> <? if($declaracion['acusado_acoso']==1){ echo 'Sí'; } else { echo 'No'; } ?></span>
 		<span class="datauser"><strong>Consume pornografía:</strong> <? if($declaracion['pornografia']==1){ echo 'Sí'; } else { echo 'No'; } ?></span>
-		<span class="datauser"><strong>Tratamiento psicológico:</strong> <?=$user['tratamiento']?></span>
-		<span class="datauser"><strong>Consume medicación:</strong> <?=$user['medicacion']?></span>
+		<span class="datauser"><strong>Tratamiento psicológico:</strong> <? if(empty($user['tratamiento'])){ echo 'No'; } else { echo $user['tratamiento']; } ?></span>
+		<span class="datauser"><strong>Consume medicación:</strong> <? if(empty($user['medicacion'])){ echo 'No'; } else { echo $user['medicacion']; } ?></span>
 	</div>
 
 	<div class="form-group marT25 padB20 align-center">
