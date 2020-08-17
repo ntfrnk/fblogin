@@ -56,3 +56,17 @@ $( () => {
     });
 
 });
+
+function becar(userID, cursoID){
+    $.post('process/user-beca.php', {
+        'userID': userID, 
+        'cursoID': cursoID
+    }, resp => {
+        if(resp=="ok"){
+            user_pagos(userID);
+            console.log('Pago ok');
+        } else {
+            console.log('Error pagos');
+        }
+    });
+}

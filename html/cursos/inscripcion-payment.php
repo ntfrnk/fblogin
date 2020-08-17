@@ -7,6 +7,11 @@ foreach(regById("cursos", $_SESSION['inscripcion']) as $curso);
 
 if($pow_get['Id']==200 || $pow_get['Id']==210){
 
+    $patform = array(
+        '200' => 'Mercado Pago',
+        '210' => 'Paypal'
+    );
+
     foreach(listReg("users_cursos", "where userID='".$_SESSION['user_learn']."' and cursoID='".$_SESSION['inscripcion']."'", '1,0', 'rand()') as $insc);
 
     if($insc['estado']==1){
@@ -20,6 +25,17 @@ if($pow_get['Id']==200 || $pow_get['Id']==210){
                 'cursoID' => $_SESSION['inscripcion']
             )
         );
+
+        _updateRegs("users_pagos", 
+        array(
+            'estado' => 2,
+            'medio' => $platform[$pow_get['Id']]
+        ), 
+        array(
+            'userID' => $_SESSION['user_learn'], 
+            'cursoID' => $_SESSION['inscripcion']
+        )
+    );
 
         include("mail/nuevo-inscripto.php");
         include("send-mail.php");

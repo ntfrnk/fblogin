@@ -109,6 +109,14 @@ if($v != 0){
         )
     );
 
+    _insertReg("users_pagos", 
+        array(
+            'userID' => $_SESSION['user_learn'], 
+            'cursoID' => $_SESSION['inscripcion'],
+            'estado' => 1
+        )
+    );
+
     header("Location: ".$pow_base."cursos/inscripcion-final/");
 
 }
