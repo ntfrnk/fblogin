@@ -150,7 +150,7 @@ $next_ok = 0;
                             <div class="form-group row justify-content-center row-form-new marT50">
                                 <label for="" class="col-md-3 col-xs-12 marT5">&nbsp;</label>
                                 <div class="col-md-6 padL0">
-                                    <a href="cursos/inscripcion-sixth/" class="btn btn-primary<? if($next_ok<2){ echo ' disabled'; } ?>">Continuar al paso siguiente »</a>
+                                    <a href="cursos/inscripcion-sixth/" class="btn btn-primary<?// if($next_ok<2){ echo ' disabled'; } ?>">Continuar al paso siguiente »</a>
                                 </div>
                             </div>
                         </div>
