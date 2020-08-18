@@ -289,7 +289,7 @@
 			<div class="form-group marT25">
 				<form id="uploader" method="POST" action="process/clase-material-upload.php" enctype="multipart/form-data">
 					<div class="hide">
-						<input type="file" name="clase-edit-archivo[]" id="clase-attach-archivo" onchange="clase_material_upload();" accept=".pdf,.zip,.rar,.mp4" multiple>
+						<input type="file" name="clase-edit-archivo[]" id="clase-attach-archivo" onchange="clase_material_upload();" accept=".pdf,.zip,.rar,.mp4,.jpg,.jpeg,.png" multiple>
 						<input type="hidden" name="clase-edit-claseID" id="clase-attach-claseID">
 						<input type="hidden" name="clase-edit-cursoID" id="clase-attach-cursoID" value="<?=$pow_get['Id']?>">
 					</div>
