@@ -31,9 +31,8 @@ $preguntas = listReg("cursos_clases_preguntas", "where claseID='".$class['Id']."
 					<h4>Curso: <?=$curso['nombre']?></h4>
 
 					<ul class="items-col marT20 f17 lh32" id="class-list-side">
+						<? $nclass = 1; ?>
 						<? foreach($clases as $clase){ ?>
-
-							<? $nclass = 1; ?>
 
 							<? if($curso['Id']!=9){ ?>
 								<? if(yala($_SESSION['user_learn'], $clase['Id']) || $nclass==1){ ?>

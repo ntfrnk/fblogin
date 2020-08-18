@@ -55,9 +55,8 @@ $state = cursando_estado($_SESSION['user_learn'], $curso['Id']);
 					<div class="marT50">
 						<h4>Contenidos en este curso</h4>
 						<ul class="items marT20 f17 lh32">
+							<? $nclass = 1; ?>
 							<? foreach($clases as $clase){ ?>
-
-								<? $nclass = 1; ?>
 
 								<? if($curso['Id']!=9){ ?>
 									<? if(yala($_SESSION['user_learn'], $clase['Id']) || $nclass==1){ ?>
