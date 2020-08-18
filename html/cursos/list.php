@@ -39,8 +39,10 @@ $state = cursando_estado($_SESSION['user_learn'], $curso['Id']);
 						<ul class="items marT20 f17 lh32">
 							<? foreach($clases as $clase){ ?>
 
+								<? $nclass = 1; ?>
+
 								<? if($curso['Id']!=9){ ?>
-									<? if(yala($_SESSION['user_learn'], $clase['Id'])){ ?>
+									<? if(yala($_SESSION['user_learn'], $clase['Id']) || $nclass==1){ ?>
 										<li class="active"><a href="cursos/class/<?=$clase['Id']?>/"><?=$clase['titulo']?></a></li>
 										<? $vista = "ok"; ?>
 									<? } else { ?>
@@ -58,6 +60,8 @@ $state = cursando_estado($_SESSION['user_learn'], $curso['Id']);
 										<li><?=$clase['titulo']?></li>
 									<? } ?>
 								<? } ?>
+
+								<? $nclass++; ?>
 
 							<? } ?>
 						</ul>
