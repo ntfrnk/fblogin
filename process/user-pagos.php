@@ -25,12 +25,15 @@ $estados = array("Cancelado","Pendiente","Pagado");
 
 			?>
 			<div class="row">
-				<div class="col-7 padTB15 wrapper"><?=campoRegById("cursos", $pago['cursoID'], "nombre")?></div>
-				<div class="col-5 padTB15 wrapper">
+				<div class="col-6 padTB15 wrapper"><?=campoRegById("cursos", $pago['cursoID'], "nombre")?></div>
+				<div class="col-6 padTB15 wrapper">
 					<?=$pago['medio']?> (<?=$estados[$pago['estado']]?>) &nbsp; 
 					<? if($pago['estado']==1){ ?>
 						<a href="javascript:;" onclick="becar(<?=$pago['userID']?>, <?=$pago['cursoID']?>)" class="btn btn-success btn-sm f13">
-							<span>Becar a este alumno</span>
+							<span>Becar</span>
+						</a>
+						<a href="javascript:;" onclick="becar(<?=$pago['userID']?>, <?=$pago['cursoID']?>, 1)" class="btn btn-success btn-sm f13">
+							<span>Inputar pago</span>
 						</a>
 					<? } ?>
 				</div>

@@ -2,6 +2,12 @@
 
 include("../config/config.php");
 
+if(empty($pow_post['medio'])){
+	$medio = 'Beca otorgada';
+} else {
+	$medio = 'Pago imputado';
+}
+
 _updateRegs("users_cursos", 
 	array(
 		'estado' => 2,
@@ -16,7 +22,7 @@ _updateRegs("users_cursos",
 _updateRegs("users_pagos", 
 	array(
 		'estado' => 2,
-		'medio' => 'Beca otorgada'
+		'medio' => $medio
 	), 
 	array(
 		'userID' => $pow_post['userID'], 

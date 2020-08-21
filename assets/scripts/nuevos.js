@@ -57,10 +57,11 @@ $( () => {
 
 });
 
-function becar(userID, cursoID){
+function becar(userID, cursoID, medio){
     $.post('process/user-beca.php', {
         'userID': userID, 
-        'cursoID': cursoID
+        'cursoID': cursoID,
+        'medio': medio
     }, resp => {
         if(resp=="ok"){
             user_pagos(userID);
@@ -92,5 +93,5 @@ function newpago(){
             console.log('Error pagos');
         }
     });
-    
+
 }
