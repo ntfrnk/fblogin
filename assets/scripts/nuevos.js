@@ -70,3 +70,27 @@ function becar(userID, cursoID){
         }
     });
 }
+
+
+function newpago(){
+
+    estado = $('#newpago-estado').val();
+    medio = $('#newpago-medio').val();
+    userID = $('#newpago-userID').val();
+    cursoID = $('#newpago-cursoID').val();
+
+    $.post('process/user-newpago.php', {
+        'estado': estado, 
+        'medio': medio, 
+        'userID': userID, 
+        'cursoID': cursoID
+    }, resp => {
+        if(resp=="ok"){
+            user_pagos(userID);
+            console.log('Pago ok');
+        } else {
+            console.log('Error pagos');
+        }
+    });
+    
+}
