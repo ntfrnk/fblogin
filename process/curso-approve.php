@@ -12,7 +12,7 @@ if($curso['estado']==1){
 	_updateRegs("users_cursos", 
 		array(
 			'estado' => 2,
-			'step' => 8
+			'step' => 9
 		), 
 		array(
 			'userID' => $pow_post['userID'], 
