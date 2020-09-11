@@ -1,5 +1,21 @@
 <?
 
+$registro = listReg("users_cursos", "where userID='".$_SESSION['user_learn']."' and estado in ('0','1')", "1,0", "rand()");
+
+if(count($registro) != 0){
+
+    foreach($registro as $reg);
+
+    if(!isset($_SESSION['inscripcion']) || empty($_SESSION['inscripcion'])){
+        $_SESSION['inscripcion'] = $reg['cursoID'];
+    }
+
+} else {
+
+    header("Location: ".$pow_base."cursos/all/");
+
+}
+
 if($_SESSION['u']['perfil']['referencia1_celular']){
     $ref1_celular = $_SESSION['u']['perfil']['referencia1_celular'];
 } elseif($_SESSION['valores']['referencia1_celular']) {

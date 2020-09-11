@@ -15,8 +15,9 @@ if(empty($_SESSION['user_learn'])) {
 	}
 
 	if($pow_get['seccion']=="logout"){
-		$_SESSION['user_learn'] = "";
-		$_SESSION['admin_learn'] = "";
+		unset($_SESSION['user_learn']);
+		unset($_SESSION['admin_learn']);
+		unset($_SESSION['inscripcion']);
 		header("Location: ".$pow_base."login/");
 	}
 

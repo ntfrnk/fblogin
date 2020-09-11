@@ -25,10 +25,11 @@ function listReg($mod,$where='',$limit='',$order='Id,asc', $cons=''){
 	}
 	// Armo la consulta
 	$sql = "Select * from pow_".$mod." ".$where." order by ".$orden.$limit;
-	$result = query($sql);
 	if($cons==1){
-		return $sql;
+		echo $sql;
+		die;
 	} else {
+		$result = query($sql);
 		return $result;
 	}
 }

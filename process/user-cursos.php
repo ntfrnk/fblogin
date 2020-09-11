@@ -16,7 +16,7 @@ $cursos = listReg("users_cursos", "where userID='".$pow_post['Id']."'", "", "cur
 				<strong>Curso: </strong><?=campoRegById("cursos", $curso['cursoID'], "nombre")?>
 				<br><strong>Estado: </strong>
 				<?
-				if($curso['estado']==1){
+				if($curso['estado']==1 || $curso['estado']==0){
 					echo '<p class="badge badge-warning inline-block">Pendiente de aprobación</p> &nbsp; ';
 					echo '<a href="javascript:;" class="text-success" onclick="curso_approve('.$curso['cursoID'].', '.$pow_post['Id'].', 1);">¿Aprobar?</a>';
 					echo ' <a href="javascript:;" class="text-danger" onclick="curso_reject('.$curso['cursoID'].', '.$pow_post['Id'].');">Rechazar</a>';

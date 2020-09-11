@@ -45,7 +45,7 @@ function _updateRegBy($where,$where_valor,$modulo,$campos_valores){
 
 
 // ACTUALIZACIÓN CON SETS Y WHERES MULTIPLES
-function _updateRegs($modulo,$set_campos_valores,$where_campos_valores){
+function _updateRegs($modulo,$set_campos_valores,$where_campos_valores, $cons=''){
 	foreach($where_campos_valores as $field => $value){
 		$whers[] = $field."='".$value."'";
 	}
@@ -57,6 +57,11 @@ function _updateRegs($modulo,$set_campos_valores,$where_campos_valores){
 	$sets = implode(", ", $sets);
 
 	$sql = "Update pow_".$modulo." set ".$sets." where ".$whers;
+
+	if($cons==1){
+		echo $sql;
+		die;
+	}
 	
 	$result = mysql_query($sql);
 	if($result){
