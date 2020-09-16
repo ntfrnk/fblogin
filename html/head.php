@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="assets/styles/helpers.min.css">
 	<link rel="stylesheet" href="assets/styles/pages.css">
 	<link rel="stylesheet" href="assets/styles/special.css?v=2020-03-23">
-	<link rel="stylesheet" href="assets/styles/nuevos.css">
+	<link rel="stylesheet" href="assets/styles/nuevos.css?v=2020-09-16">
 	<link rel="stylesheet" href="assets/styles/theme.css?v=2020-04-09">
 	<link rel="stylesheet" href="assets/styles/responsive.css">
 	<link rel="stylesheet" href="assets/plugins/font-awesome/css/all.min.css">
