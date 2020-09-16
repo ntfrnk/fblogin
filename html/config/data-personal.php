@@ -100,6 +100,10 @@ foreach($estados_civiles as $key => $estado){
                                     </select>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
+                                    <label for="ocupacion" class="col-md-4 col-xs-12 marT5">Ocupación:</label>
+                                    <input type="text" name="ocupacion" id="ocupacion" value="<? if($_SESSION['valores']['ocupacion']){ echo $_SESSION['valores']['ocupacion'];}else{ echo $_SESSION['u']['perfil']['ocupacion'];} ?>" class="form-control col-md-6 col-xs-12" placeholder="Ocupación" autocomplete="off" required>
+                                </div>
+                                <div class="form-group row justify-content-center row-form-new">
                                     <label for="" class="d-none d-md-block col-md-3 col-xs-12 marT5">&nbsp;</label>
                                     <div class="col-xs-12 col-md-6 padLR0">
                                         <button type="submit" class="btn btn-primary">Guardar cambios</button>

@@ -118,6 +118,10 @@ $fecha_max = $anio.'-'.date('m-d');
                                     </select>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
+                                    <label for="ocupacion" class="col-md-4 col-xs-12 marT5">Ocupación:</label>
+                                    <input type="input" name="ocupacion" id="ocupacion" value="<? if($_SESSION['valores']['ocupacion']){ echo $_SESSION['valores']['ocupacion'];}else{ echo $_SESSION['u']['perfil']['ocupacion'];} ?>" class="form-control col-md-6 col-xs-12" autocomplete="off" required>
+                                </div>
+                                <div class="form-group row justify-content-center row-form-new">
                                     <label for="" class="col-md-4 col-xs-12 marT5">&nbsp;</label>
                                     <div class="col-md-6 padL0">
                                         <button type="submit" class="btn btn-primary">Continuar al paso siguiente »</button>

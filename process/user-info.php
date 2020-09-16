@@ -22,6 +22,7 @@ $birthday = date_create($user['nacimiento']);
 		<span class="datauser"><strong>DNI Nº:</strong> <?=$user['dni']?></span>	
 		<span class="datauser"><strong>Nacionalidad:</strong> <?=$user['nacionalidad']?></span>	
 		<span class="datauser"><strong>Estado civil:</strong> <?=$user['estado_civil']?></span>
+		<span class="datauser"><strong>Ocupación:</strong> <?=$user['ocupacion']?></span>
 
 		<h4 class="datauserh4">Datos de contacto:</h4>
 		<span class="datauser"><strong>Teléfono:</strong> <?=$user['fijo']?></span>

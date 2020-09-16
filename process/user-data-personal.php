@@ -11,7 +11,8 @@ $valores = array(
     'nacimiento' => $pow_post['nacimiento'],
     'dni' => $pow_post['dni'],
     'nacionalidad' => $pow_post['nacionalidad'],
-    'estado_civil' => $pow_post['estado_civil']
+    'estado_civil' => $pow_post['estado_civil'],
+    'ocupacion' => $pow_post['ocupacion']
 );
 
 $_SESSION['valores'] = $valores;
