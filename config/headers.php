@@ -4,7 +4,7 @@ $seccSinLogin = array("login", "registro", "recover");
 
 if(empty($_SESSION['user_learn'])) {
 
-	if(!in_array($pow_get['seccion'], $seccSinLogin)){
+	if(!in_array($pow_get['seccion'], $seccSinLogin) && $pow_get['seccion']!="faqs"){
 		header("Location: ".$pow_base."login/");
 	}
 

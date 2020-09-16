@@ -13,7 +13,7 @@
 		<? include_once("html/header.php"); ?>
 		<? include_once("html/alerts.php"); ?>
 
-		<main class="padB100">
+		<main class="<? if($pow_get['seccion']!="login"){ echo "padB100"; } ?>">
 
 			<? include_once("html/core.php"); ?>
 

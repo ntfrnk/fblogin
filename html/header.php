@@ -5,6 +5,7 @@
 				<? if(empty($_SESSION['user_learn'])){ ?>
 					<li><a href="login/"><i class="fa fa-sign-in-alt"></i> Ingresar</a></li>
 					<li><a href="registro/"><i class="fa fa-user"></i> Registrarme</a></li>
+					<li><a href="faqs/"><i class="fa fa-question-circle"></i> Preguntas frecuentes</a></li>
 				<? } else { ?>
 					<li><a href="<?=$pow_base?>"><i class="fa fa-home"></i> Home</a></li>
 					<? if($_SESSION['admin_learn']!=1){ ?>

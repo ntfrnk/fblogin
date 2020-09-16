@@ -141,3 +141,20 @@
 .pop-box2 {
     z-index: 3 !important;
 }
+
+
+/*
+** Preguntas frecuentes
+*/
+
+.faqs h3 {
+    font-family: Muli;
+    margin-top: 30px;
+    font-weight: 600;
+    color: #444;
+    font-size: 25px;
+}
+
+.faqs p {
+    font-size: 19px;
+}
