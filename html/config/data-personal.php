@@ -73,11 +73,11 @@ foreach($estados_civiles as $key => $estado){
 
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="nombre" class="col-md-4 col-xs-12 marT5">Nombre:</label>
-                                    <input type="text" name="nombre" id="nombre" value="<? if(isset($_SESSION['valores']['nombre'])) { echo $_SESSION['valores']['nombre']; } else { echo $_SESSION['u']['perfil']['nombre']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Nombre" autocomplete="off" pattern="[a-zA-Z\. áéíóúÑÁÉÍÓÚÑ]{3,30}" required>
+                                    <input type="text" name="nombre" id="nombre" value="<? if(isset($_SESSION['valores']['nombre'])) { echo $_SESSION['valores']['nombre']; } else { echo $_SESSION['u']['perfil']['nombre']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Nombre" autocomplete="off" pattern="[a-zA-Z\. áéíóúñÁÉÍÓÚÑ]{3,30}" required>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="apellido" class="col-md-4 col-xs-12 marT5">Apellido:</label>
-                                    <input type="text" name="apellido" id="apellido" value="<? if($_SESSION['valores']['apellido']){ echo $_SESSION['valores']['apellido']; }else{ echo $_SESSION['u']['perfil']['apellido']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Apellido" autocomplete="off" pattern="[a-zA-Z\. áéíóúÑÁÉÍÓÚÑ]{3,30}" required>
+                                    <input type="text" name="apellido" id="apellido" value="<? if($_SESSION['valores']['apellido']){ echo $_SESSION['valores']['apellido']; }else{ echo $_SESSION['u']['perfil']['apellido']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Apellido" autocomplete="off" pattern="[a-zA-Z\. áéíóúñÁÉÍÓÚÑ]{3,30}" required>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="nacimiento" class="col-md-4 col-xs-12 marT5">Fecha de nacimiento:</label>
