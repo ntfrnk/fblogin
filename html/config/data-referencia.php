@@ -93,7 +93,7 @@ if(count($r2_celular)<3){
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="referencia1_nombre" class="col-md-3 col-xs-12 marT5">Nombre completo:</label>
-                                    <input type="text" name="referencia1_nombre" id="referencia1_nombre" value="<? if(isset($_SESSION['valores']['referencia1_nombre'])) { echo $_SESSION['valores']['referencia1_nombre']; } else { echo $_SESSION['u']['perfil']['referencia1_nombre']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Nombre completo" autocomplete="off" pattern="[a-zA-Z\. áéíóúÑÁÉÍÓÚÑ]{3,30}" required>
+                                    <input type="text" name="referencia1_nombre" id="referencia1_nombre" value="<? if(isset($_SESSION['valores']['referencia1_nombre'])) { echo $_SESSION['valores']['referencia1_nombre']; } else { echo $_SESSION['u']['perfil']['referencia1_nombre']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Nombre completo" autocomplete="off" pattern="[a-zA-Z\. áéíóúñÁÉÍÓÚÑ]{3,30}" required>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="referencia1_email" class="col-md-3 col-xs-12 marT5">Correo electrónico:</label>
@@ -122,7 +122,7 @@ if(count($r2_celular)<3){
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="referencia2_nombre" class="col-md-3 col-xs-12 marT5">Nombre completo:</label>
-                                    <input type="text" name="referencia2_nombre" id="referencia2_nombre" value="<? if(isset($_SESSION['valores']['referencia2_nombre'])) { echo $_SESSION['valores']['referencia2_nombre']; } else { echo $_SESSION['u']['perfil']['referencia2_nombre']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Nombre completo" autocomplete="off" pattern="[a-zA-Z\. áéíóúÑÁÉÍÓÚÑ]{3,30}" required>
+                                    <input type="text" name="referencia2_nombre" id="referencia2_nombre" value="<? if(isset($_SESSION['valores']['referencia2_nombre'])) { echo $_SESSION['valores']['referencia2_nombre']; } else { echo $_SESSION['u']['perfil']['referencia2_nombre']; } ?>" class="form-control col-md-6 col-xs-12" placeholder="Nombre completo" autocomplete="off" pattern="[a-zA-Z\. áéíóúñÁÉÍÓÚÑ]{3,30}" required>
                                 </div>
                                 <div class="form-group row justify-content-center row-form-new">
                                     <label for="referencia2_email" class="col-md-3 col-xs-12 marT5">Correo electrónico:</label>
