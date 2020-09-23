@@ -167,7 +167,7 @@
 				<span class="f12 text-danger msj" id="apellido-msj"></span>
 			</div>
 			<div class="form-group">
-				<input type="number" id="curso-new-costo" class="form-input" autocomplete="off" placeholder="Costo (USD)" autocomplete="off" required>
+				<input type="text" id="curso-new-costo" class="form-input" autocomplete="off" placeholder="Costo (USD) / (ARS)" autocomplete="off" required>
 				<span class="f12 text-danger msj" id="email-msj"></span>
 			</div>
 			<div class="form-group">

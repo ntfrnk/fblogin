@@ -25,7 +25,7 @@ foreach(regById("cursos", $pow_post['Id']) as $curso);
 	</div>
 </div> -->
 <div class="form-group">
-	<input type="number" id="curso-edit-costo" class="form-input" autocomplete="off" placeholder="Costo (USD)" value="<?=$curso['costo']?>" autocomplete="off" required>
+	<input type="text" id="curso-edit-costo" class="form-input" autocomplete="off" placeholder="Costo (USD) / (ARS)" value="<?=$curso['costo']?>" autocomplete="off" required>
 	<span class="f12 text-danger msj" id="email-msj"></span>
 </div>
 <div class="form-group">
