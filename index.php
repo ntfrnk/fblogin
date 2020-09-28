@@ -1,5 +1,6 @@
 <? include_once("config/config.php"); ?>
 <? include_once("config/headers.php"); ?>
+<? include_once("config/procesos.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 
